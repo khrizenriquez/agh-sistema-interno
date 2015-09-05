@@ -1,2 +1,5 @@
 /build/
 /dist/
+
+/src/assets/patients/*.jpg
+/src/assets/patients/*.png
