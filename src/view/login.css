@@ -8,11 +8,15 @@ TextField, PasswordField {
     -fx-background-insets: 0, 0, 1, 2;
 }
 TextField:focused, PasswordField:focused {
-     -fx-focus-color: transparent;
-     -fx-faint-focus-color: transparent;
-     -fx-background-insets: 0, 0, 1, 2;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0, 0, 1, 2;
 }
 
+
+.loginBackground {
+    -fx-background-image: url('/assets/backgrounds/ws_Green_Blur.jpg');
+}
 .mainFxmlClass {
     -fx-font-size: 16px;
 }

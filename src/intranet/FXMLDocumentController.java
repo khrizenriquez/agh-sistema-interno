@@ -19,14 +19,12 @@ import javafx.scene.control.*;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private Label label;
     private TextField userName;
     private PasswordField password;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
-        label.setText("Hello World!");
     }
     
     @Override

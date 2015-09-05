@@ -9,17 +9,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="676.0" styleClass="mainFxmlClass" stylesheets="@../view/login.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="intranet.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="676.0" styleClass="mainFxmlClass" stylesheets="@../view/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intranet.FXMLDocumentController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <PasswordField id="password" layoutX="209.0" layoutY="262.0" prefHeight="53.0" prefWidth="200.0" promptText="Contraseña" />
-      <TextField id="userName" layoutX="209.0" layoutY="211.0" prefHeight="53.0" prefWidth="259.0" promptText="Usuario" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="294.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/logos/logoAgh.jpg" />
-         </image>
-      </ImageView>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="446.0" prefHeight="15.0" prefWidth="677.0" text="Pie de página" />
-      <Button layoutX="247.0" layoutY="350.0" mnemonicParsing="false" text="Inicia sesión" />
+      <Pane prefHeight="467.0" prefWidth="676.0">
+         <children>
+            <PasswordField id="password" layoutX="209.0" layoutY="267.0" prefHeight="53.0" prefWidth="259.0" promptText="Contraseña" />
+            <TextField id="userName" layoutX="209.0" layoutY="214.0" prefHeight="53.0" prefWidth="259.0" promptText="Usuario" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="295.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logos/logoAgh.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="443.0" prefHeight="15.0" prefWidth="677.0" text="Pie de página" />
+            <Button layoutX="278.0" layoutY="320.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="120.0" text="Inicia sesión" />
+         </children>
+      </Pane>
     </children>
 </AnchorPane>
