@@ -1,5 +1,8 @@
 /build/
 /dist/
 
+#Images
 /src/assets/patients/*.jpg
 /src/assets/patients/*.png
+/src/assets/backgrounds/*.jpg
+/src/assets/backgrounds/*.png
