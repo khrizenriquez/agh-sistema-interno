@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 /**
  *
@@ -20,6 +20,8 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
+    private TextField userName;
+    private PasswordField password;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
