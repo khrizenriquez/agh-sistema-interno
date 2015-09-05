@@ -11,17 +11,17 @@
 
 <AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="676.0" styleClass="mainFxmlClass" stylesheets="@../view/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="intranet.FXMLDocumentController">
     <children>
-      <Pane prefHeight="467.0" prefWidth="676.0">
+      <Pane prefHeight="467.0" prefWidth="676.0" styleClass="loginBackground">
          <children>
-            <PasswordField id="password" layoutX="209.0" layoutY="267.0" prefHeight="53.0" prefWidth="259.0" promptText="Contraseña" />
             <TextField id="userName" layoutX="209.0" layoutY="214.0" prefHeight="53.0" prefWidth="259.0" promptText="Usuario" />
+            <PasswordField id="password" layoutX="209.0" layoutY="267.0" prefHeight="53.0" prefWidth="259.0" promptText="Contraseña" />
+            <Button layoutX="260.0" layoutY="320.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="157.0" text="Inicia sesión" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="295.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/logos/logoAgh.jpg" />
                </image>
             </ImageView>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutY="443.0" prefHeight="15.0" prefWidth="677.0" text="Pie de página" />
-            <Button layoutX="278.0" layoutY="320.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="120.0" text="Inicia sesión" />
          </children>
       </Pane>
     </children>
