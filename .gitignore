@@ -6,3 +6,6 @@
 /src/assets/patients/*.png
 /src/assets/backgrounds/*.jpg
 /src/assets/backgrounds/*.png
+
+#Configurations
+/src/Configurations/*.sqlite
