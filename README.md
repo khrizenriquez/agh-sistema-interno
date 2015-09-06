@@ -1,2 +1,2 @@
 # agh-sistema-interno
-Sistema interno para la asociación guatemalteca de hemofilia ong
+Sistema interno para la Asociación Guatemalteca de Hemofilia ONG
