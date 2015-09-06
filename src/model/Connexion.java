@@ -5,10 +5,17 @@
  */
 package model;
 
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author khriz
  */
-public class Connection {
-    
+public class Connexion {
+    public boolean Connexion () {
+        return false;
+    }
 }
