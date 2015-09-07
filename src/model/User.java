@@ -5,13 +5,8 @@
  */
 package model;
 
-import configurations.GeneralVariables;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.*;
-import java.util.Date;
+import java.security.MessageDigest;
+import java.util.ArrayList;
 
 /**
  * @author Duku
@@ -19,13 +14,37 @@ import java.util.Date;
 public class User extends Connection {
     private String tableName = "user";
 
-    public void setUser (String username, String password, Date createdAt, Date updatedAt, int userTypeId) {}
-    
+    public boolean setUser (String userName, String password, String createdAt, 
+            String updatedAt, int userTypeId, int userStatus) {
+        return true;
+    }
     public void getUser (int id) {}
     
-    public String getActualDate () {
-        Date date = new Date();
-
-        return GeneralVariables.dateFormat.format(date);
+    protected String setUserPassword (String pass) {
+        String newPassword = "";
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
+            messageDigest.update(pass.getBytes());
+            newPassword = new String(messageDigest.digest());
+        } catch (Exception ex) {
+            
+        }
+        
+        return newPassword;
+    }
+    protected String getUserPassword (int id) {
+        return "";
+    }
+    
+    protected void matchUse () {}
+    protected void macthPassword () {}
+    
+    protected void updateUser (int id, ArrayList params) {}
+    
+    protected boolean setUserType () {
+        return true;
+    }
+    protected int getUserType () {
+        return 1;
     }
 }
