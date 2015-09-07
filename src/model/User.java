@@ -14,8 +14,7 @@ import java.text.*;
 import java.util.Date;
 
 /**
- *
- * @author khriz
+ * @author Duku
  */
 public class User extends Connection {
     private String tableName = "user";
