@@ -1,19 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+*/
 package intranet;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.*;
+import javafx.stage.*;
+import java.sql.*;
 
 /**
- *
- * @author Chris
+ * @author Duku
  */
 public class Intranet extends Application {
     

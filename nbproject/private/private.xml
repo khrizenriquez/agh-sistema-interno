@@ -5,6 +5,9 @@
         <group>
             <file>file:/home/khriz/NetBeansProjects/intranet/src/model/Connexion.java</file>
             <file>file:/home/khriz/NetBeansProjects/intranet/src/intranet/Intranet.java</file>
+            <file>file:/home/khriz/NetBeansProjects/intranet/src/model/UserType.java</file>
+            <file>file:/home/khriz/NetBeansProjects/intranet/src/model/Town.java</file>
+            <file>file:/home/khriz/NetBeansProjects/intranet/src/model/ResponsibleType.java</file>
         </group>
     </open-files>
 </project-private>
