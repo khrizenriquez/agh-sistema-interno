@@ -23,7 +23,7 @@ public class User extends Connection {
     */
     public boolean setUser (String userName, String password, String createdAt, 
             String updatedAt, int userTypeId) {
-        return setUser(userName, password, createdAt, updatedAt, userTypeId, 1);
+        return this.setUser(userName, password, createdAt, updatedAt, userTypeId, 1);
     }
     public void getUser (int id) {}
     
