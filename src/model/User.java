@@ -18,6 +18,13 @@ public class User extends Connection {
             String updatedAt, int userTypeId, int userStatus) {
         return true;
     }
+    /*
+        Función con parametro de userStatus por defecto
+    */
+    public boolean setUser (String userName, String password, String createdAt, 
+            String updatedAt, int userTypeId) {
+        return setUser(userName, password, createdAt, updatedAt, userTypeId, 1);
+    }
     public void getUser (int id) {}
     
     protected String setUserPassword (String pass) {
