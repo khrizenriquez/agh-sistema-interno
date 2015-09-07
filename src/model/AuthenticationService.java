@@ -10,5 +10,16 @@ package model;
  * @author khriz
  */
 public class AuthenticationService {
+    public void login () {}
+    public void logout () {}
     
+    public boolean isAdmin (int userId) {
+        return true;
+    }
+    public boolean isNormal (int userId) {
+        return true;
+    }
+    public boolean isLogged (int userId) {
+        return true;
+    }
 }
