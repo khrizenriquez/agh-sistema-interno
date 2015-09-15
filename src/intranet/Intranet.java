@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.*;
 import java.sql.*;
+import model.User;
 
 /**
  * @author Duku
@@ -19,9 +20,11 @@ public class Intranet extends Application {
 
         Scene scene = new Scene(root);
 
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        //stage.setScene(scene);
+        //stage.setResizable(false);
+        //stage.show();
+        User c = new User();
+        System.out.print("CLAVE: " + c.setUserPassword("12345678"));
     }
 
     /**

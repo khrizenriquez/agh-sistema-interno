@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/home/khriz/NetBeansProjects/intranet/src/intranet/Intranet.java</file>
+            <file>file:/home/khriz/NetBeansProjects/intranet/src/model/User.java</file>
+            <file>file:/home/khriz/NetBeansProjects/intranet/src/model/Connection.java</file>
+        </group>
+>>>>>>> 5fb6279d38c284f9fc22bd35421b00becf728c56
     </open-files>
 </project-private>
