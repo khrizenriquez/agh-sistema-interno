@@ -81,11 +81,20 @@ public class User extends Connection {
         return true;
     }
     
-    public void getUserByPassword (String username, String password) {
+    public String getUserByPassword (String username, String password) {
         ResultSet result = null;
         try {
-            PreparedStatement st = conn.prepareStatement("select * from user");
-            result = st.executeQuery();
+            Connection connect = new Connection();
+            connect.startConnection();
+            String query = "SELECT * FROM user where user = '"+ username +"' and password = '"+ password +"';";
+            //resultSet = statement.executeQuery(query);
+            //PreparedStatement st = conn.prepareStatement(query);
+            /*
+             PreparedStatement pstm = connection.prepareStatement(q);
+            pstm.execute();
+            pstm.close();
+            */
+            result = statement.executeQuery(query);
             while (result.next()) {
                 System.out.print("ID: ");
                 System.out.println(result.getInt("id"));
@@ -101,6 +110,7 @@ public class User extends Connection {
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
         }
+        return "";
 
     }
     protected int getUserType () {

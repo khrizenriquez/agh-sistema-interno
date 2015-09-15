@@ -14,6 +14,8 @@ import java.sql.*;
 public class Connection {
     
     Connection conn             = null;
+    public ResultSet resultSet  = null;
+    public Statement statement  = null;
     private String controller   = "org.sqlite.JDBC";
     private String databaseName = "agh-sistema-interno.sqlite";
     private String path         = "jdbc:sqlite:src/configurations/" + databaseName;
