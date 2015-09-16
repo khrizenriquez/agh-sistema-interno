@@ -9,7 +9,11 @@ package model;
  *
  * @author khriz
  */
-public class AuthenticationService extends Connection {
+public class AuthenticationService extends Conexion {
+
+    public AuthenticationService() throws ClassNotFoundException {
+    }
+  
     public void login () {}
     public void logout () {}
     
@@ -27,7 +31,7 @@ public class AuthenticationService extends Connection {
         return tmpValue;
     }
     protected void matchUser () {}
-    protected boolean macthPassword (String password, String hashPassword) {
+    protected boolean macthPassword (String password, String hashPassword) throws ClassNotFoundException {
         String tmpPass = "";
         User u = new User();
         tmpPass = u.setUserPassword(password);

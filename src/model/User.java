@@ -9,15 +9,20 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
-
 /**
  * @author Duku
  */
-public class User extends Connection {
+public class User extends Conexion {
+    
     private String tableName = "user";
     private String userName, password, createdAt, updatedAt;
     private int userTypeId, userStatus;
+    private ResultSet rs = null;
+    
+    public User() throws ClassNotFoundException {
+    }
 
     public boolean setUser (String userName, String password, String createdAt, 
             String updatedAt, int userTypeId, int userStatus) {
@@ -82,21 +87,20 @@ public class User extends Connection {
     }
     
     public void getUserByPassword (String username, String password) {
-        ResultSet result = null;
+       
         try {
-            PreparedStatement st = conn.prepareStatement("select * from user");
-            result = st.executeQuery();
-            while (result.next()) {
-                System.out.print("ID: ");
-                System.out.println(result.getInt("id"));
+                 rs = Conexion.getInstancia().hacerConsulta("select * from user");
+                while (rs.next()) {
+                    System.out.print("ID: ");
+                    System.out.println(rs.getInt("id"));
  
-                System.out.print("Nombre: ");
-                System.out.println(result.getString("username"));
+                    System.out.print("Nombre: ");
+                    System.out.println(rs.getString("user_name"));
  
-                System.out.print("Apellidos: ");
-                System.out.println(result.getString("password"));
+                    System.out.print("Apellidos: ");
+                    System.out.println(rs.getString("password"));
  
-                System.out.println("=======================");
+                    System.out.println("=======================");
             }
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
