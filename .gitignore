@@ -1,6 +1,8 @@
 /build/
 /dist/
 
+/nbproject
+
 #Images
 /src/assets/patients/*.jpg
 /src/assets/patients/*.png
