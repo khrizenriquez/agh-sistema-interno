@@ -20,9 +20,9 @@ public class Intranet extends Application {
 
         Scene scene = new Scene(root);
 
-        //stage.setScene(scene);
-        //stage.setResizable(false);
-        //stage.show();
+//        stage.setScene(scene);
+//        stage.setResizable(false);
+//        stage.show();
         //http://www.jc-mouse.net/base-de-datos/sqlitejava-conexion
         
         String controller   = "org.sqlite.JDBC";

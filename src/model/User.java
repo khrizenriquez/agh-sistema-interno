@@ -9,6 +9,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 /**
@@ -86,15 +87,17 @@ public class User extends Conexion {
         return true;
     }
     
-<<<<<<< HEAD
-    public void getUserByPassword (String username, String password) {
-       
-        try {
-                 rs = Conexion.getInstancia().hacerConsulta("select * from user");
-                while (rs.next()) {
-                    System.out.print("ID: ");
-                    System.out.println(rs.getInt("id"));
-=======
+
+//    public void getUserByPassword (String username, String password) throws ClassNotFoundException, SQLException {
+//       
+//        
+//                 rs = Conexion.getInstancia().hacerConsulta("select * from user");
+//                while (rs.next()) {
+//                    System.out.print("ID: ");
+//                    System.out.println(rs.getInt("id"));
+//                    
+//                    
+//                }}
     public String getUserByPassword (String username, String password) {
         ResultSet result = null;
         try {
@@ -108,11 +111,11 @@ public class User extends Conexion {
             pstm.execute();
             pstm.close();
             */
-            result = statement.executeQuery(query);
+            //result = Statement.executeQuery(query);
             while (result.next()) {
                 System.out.print("ID: ");
                 System.out.println(result.getInt("id"));
->>>>>>> 28d333379a9f1f9ae6a5a25791719a20e7936631
+
  
                     System.out.print("Nombre: ");
                     System.out.println(rs.getString("user_name"));
