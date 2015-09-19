@@ -25,6 +25,8 @@ public class Intranet extends Application {
         //http://www.jc-mouse.net/base-de-datos/sqlitejava-conexion
         
         User u = new User();
+        //System.out.println(u.getUserPassword("khrizenriquez"));
+        //System.out.println(u.getUserByPassword("khrizenriquez", "12345678"));
         System.out.print(u.getUserByPassword("khrizenriquez", "12345678"));
     }
 
