@@ -7,11 +7,8 @@ package model;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
+import org.json.simple.*;
 /**
  * @author Duku
  */
@@ -81,56 +78,37 @@ public class User extends Conexion {
         return toHexadecimal(digest);
     }
 
-    protected void updateUser (int id, ArrayList params) {}
+    protected void updateUser (int id, JSONObject params) {}
     
     protected boolean setUserType () {
         return true;
     }
     
 
-//    public void getUserByPassword (String username, String password) throws ClassNotFoundException, SQLException {
-//       
-//        
-//                 rs = Conexion.getInstancia().hacerConsulta("select * from user");
-//                while (rs.next()) {
-//                    System.out.print("ID: ");
-//                    System.out.println(rs.getInt("id"));
-//                    
-//                    
-//                }}
-    public String getUserByPassword (String username, String password) {
-        ResultSet result = null;
+    public JSONObject getUserByPassword (String username, String password) {
+        JSONObject result = new JSONObject();
+        String rawQuery = "SELECT * FROM " + tableName + " where "+ tableName +".user_name = '" 
+                    + username + 
+                    "' and "+ tableName +".password = '" 
+                    + this.setUserPassword(password) + "'";
         try {
-            Connection connect = new Connection();
-            connect.startConnection();
-            String query = "SELECT * FROM user where user = '"+ username +"' and password = '"+ password +"';";
-            //resultSet = statement.executeQuery(query);
-            //PreparedStatement st = conn.prepareStatement(query);
-            /*
-             PreparedStatement pstm = connection.prepareStatement(q);
-            pstm.execute();
-            pstm.close();
-            */
-            //result = Statement.executeQuery(query);
-            while (result.next()) {
-                System.out.print("ID: ");
-                System.out.println(result.getInt("id"));
-
- 
-                    System.out.print("Nombre: ");
-                    System.out.println(rs.getString("user_name"));
- 
-                    System.out.print("Apellidos: ");
-                    System.out.println(rs.getString("password"));
- 
-                    System.out.println("=======================");
+            rs = Conexion.getInstance().doQuery(rawQuery);
+            while (rs.next()) {
+                result.put("username",      rs.getString("user_name"));
+                result.put("password",      rs.getString("password"));
+                result.put("created_at",    rs.getString("created_at"));
+                result.put("updated_at",    rs.getString("updated_at"));
+                result.put("status",        rs.getString("status"));
             }
-        } catch (Exception ex) {
-            System.err.println(ex.getMessage());
-        }
-        return "";
 
+            return result;
+        } catch (Exception e) {
+            //e.printStackTrace();
+            System.err.println(e.getMessage());
+            return null;
+        }
     }
+
     protected int getUserType () {
         return 1;
     }
