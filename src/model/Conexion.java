@@ -9,31 +9,32 @@ public class Conexion {
     
     private String databaseName = "agh-sistema-interno.sqlite";
     private Connection conexion;
-    private Statement sentencia;
-    private static Conexion instancia;
-    public static Conexion getInstancia() throws ClassNotFoundException{
-        if(instancia == null){
-            instancia= new Conexion();
+    private Statement statement;
+    private static Conexion instance;
+
+    public static Conexion getInstance() throws ClassNotFoundException{
+        if(instance == null){
+            instance = new Conexion();
         }
-        return instancia;
+        return instance;
     }
     public Conexion() throws ClassNotFoundException{
         try {
             Class.forName("org.sqlite.JDBC");    
             conexion = DriverManager.getConnection("jdbc:sqlite:src/configurations/" + databaseName);
             System.out.println("Conexión exitosa a la base de datos");
-            sentencia = conexion.createStatement();
+            statement = conexion.createStatement();
         }catch (SQLException e){
             e.printStackTrace();            
         }
     }
-    public ResultSet hacerConsulta(String consulta ){
-        ResultSet resultado = null;
-        try{
-            resultado= sentencia.executeQuery(consulta);
-        }catch(SQLException e){
+    public ResultSet doQuery (String query) {
+        ResultSet result = null;
+        try {
+            result = statement.executeQuery(query);
+        } catch(SQLException e) {
             e.printStackTrace();
         }
-        return resultado;
+        return result;
     }
 }
