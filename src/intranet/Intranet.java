@@ -6,7 +6,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.*;
-import java.sql.*;
 import model.User;
 
 /**
@@ -20,9 +19,13 @@ public class Intranet extends Application {
 
         Scene scene = new Scene(root);
 
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+//        stage.setScene(scene);
+//        stage.setResizable(false);
+//        stage.show();
+        //http://www.jc-mouse.net/base-de-datos/sqlitejava-conexion
+        
+        User u = new User();
+        System.out.print(u.getUserByPassword("khrizenriquez", "12345678"));
     }
 
     /**
