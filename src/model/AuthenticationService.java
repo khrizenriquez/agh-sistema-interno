@@ -5,6 +5,8 @@
  */
 package model;
 
+import model.User;
+import org.json.simple.JSONObject;
 /**
  *
  * @author khriz
@@ -14,14 +16,29 @@ public class AuthenticationService extends Conexion {
     public AuthenticationService() throws ClassNotFoundException {
     }
   
-    public void login () {}
-    public void logout () {}
+    public void login (String user, String pass) throws ClassNotFoundException {
+        boolean response = this.matchCredentials(user, pass);
+        
+        if (!response) {
+            
+        }
+        
+        //Crear la sesión
+    }
+    public void logout () {
+        //  Mato la sesión actual y muestro la escena de login
+    }
     
-    public boolean matchCredentials (String username, String password) {
+    public boolean matchCredentials (String username, String password) throws ClassNotFoundException {
+        User u = new User();
+        
         String user = this.trimValues(username);
-        String pass = this.trimValues(password);
+        String pass = u.setUserPassword(this.trimValues(password));
         
+        JSONObject response = new JSONObject();
+        response = u.getUserByPassword(user, pass);
         
+        if (response.get("Data") == null) return false;
 
         return true;
     }

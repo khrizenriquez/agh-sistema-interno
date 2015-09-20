@@ -6,7 +6,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.stage.*;
-import java.sql.*;
 import model.User;
 
 /**
@@ -25,30 +24,10 @@ public class Intranet extends Application {
 //        stage.show();
         //http://www.jc-mouse.net/base-de-datos/sqlitejava-conexion
         
-        String controller   = "org.sqlite.JDBC";
-        String databaseName = "agh-sistema-interno.sqlite";
-        String path         = "jdbc:sqlite:src/configurations/" + databaseName;
-        Statement statement = null;
-        Connection conn = null;
-        try {
-            Class.forName(controller);
-            conn = (Connection) DriverManager.getConnection(path);
-        } catch (Exception ex) {
-            System.out.println("Error" + ex.getMessage());
-        }
-        
-        String query = "SELECT * FROM user where user = 'khrizenriquez' and password = '12345678';";
-        ResultSet resultSet = (ResultSet) conn.createStatement();
-        resultSet = statement.executeQuery("SELECT * FROM persona ; ");
-        while (resultSet.next()) {
-            System.out.println(resultSet.getRow());
-        }
-        //PreparedStatement st = conn.prepareStatement(query);
-        /*
-         PreparedStatement pstm = connection.prepareStatement(q);
-        pstm.execute();
-        pstm.close();
-        */
+        User u = new User();
+        //System.out.println(u.getUserPassword("khrizenriquez"));
+        //System.out.println(u.getUserByPassword("khrizenriquez", "12345678"));
+        System.out.print(u.getUserByPassword("khrizenriquez", "12345678"));
     }
 
     /**
