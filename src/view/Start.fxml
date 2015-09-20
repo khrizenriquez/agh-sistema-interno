@@ -2,6 +2,7 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
@@ -9,13 +10,20 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: WHITE;&#10;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.StartController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="1.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: WHITE;&#10;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.StartController">
   <children>
-    <Pane focusTraversable="false" layoutX="214.0" layoutY="429.0" prefHeight="157.0" prefWidth="169.0" style="-fx-background-color: YELLOW;&#10;">
+    <Pane focusTraversable="false" layoutX="48.0" layoutY="403.0" prefHeight="137.0" prefWidth="147.0" snapToPixel="true" style="-fx-background-color:RED;&#10;&#10;">
+      <children>
+        <Hyperlink graphicTextGap="0.0" layoutX="8.0" layoutY="31.0" prefWidth="128.88418579101562" text="Respon-&#10;sables" textAlignment="CENTER" textFill="#67ffff" wrapText="false">
+          <font>
+            <Font size="27.0" />
+          </font>
+        </Hyperlink>
+      </children>
       <effect>
         <BoxBlur height="2.0" width="2.0">
           <input>
-            <ColorAdjust brightness="0.41269841269841256" contrast="1.0" hue="0.20634920634920628" saturation="0.23809523809523814">
+            <ColorAdjust brightness="-0.523809523809524" contrast="1.0" saturation="0.07936507936507953">
               <input>
                 <Bloom />
               </input>
@@ -24,56 +32,75 @@
         </BoxBlur>
       </effect>
     </Pane>
+    <Pane focusTraversable="false" layoutX="54.0" layoutY="259.0" prefHeight="145.02627563476562" prefWidth="157.0" rotate="5.0" style="-fx-background-color:BLUE SKY;&#10;">
+      <children>
+        <Hyperlink layoutX="2.0" layoutY="27.0" prefHeight="86.62365531921387" prefWidth="155.046875" text="Enferme-&#10; dades" textAlignment="LEFT" textFill="WHITE">
+          <font>
+            <Font size="30.0" fx:id="x1" />
+          </font>
+        </Hyperlink>
+      </children>
+      <effect>
+        <BoxBlur height="0.0" iterations="0" width="0.0">
+          <input>
+            <ColorAdjust brightness="-0.44444444444444475" contrast="0.39682539682539675" hue="-0.19047619047619047" saturation="0.0793650793650793">
+              <input>
+                <Bloom threshold="0.0" />
+              </input>
+            </ColorAdjust>
+          </input>
+        </BoxBlur>
+      </effect>
+    </Pane>
+    <Pane focusTraversable="false" layoutX="24.0" layoutY="118.0" mouseTransparent="true" opacity="1.0" prefHeight="144.1531473994255" prefWidth="159.1091576218605" rotate="171.0" scaleZ="1.0" style="-fx-background-color: YELLOW;&#10;">
+      <effect>
+        <BoxBlur height="2.0" width="2.0">
+          <input>
+            <ColorAdjust brightness="-0.7936507936507937" contrast="0.8253968253968254" hue="0.2857142857142856" saturation="0.4126984126984128">
+              <input>
+                <Bloom threshold="0.0" />
+              </input>
+            </ColorAdjust>
+          </input>
+        </BoxBlur>
+      </effect>
+      <padding>
+        <Insets />
+      </padding>
+    </Pane>
     <Pane focusTraversable="false" layoutX="14.0" layoutY="7.0" prefHeight="89.0" prefWidth="772.0" style="-fx-background-color: BLUE SKY;&#10;">
       <children>
-        <Text fill="WHITE" layoutX="66.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asociación Guatemalteca de Hemofilia">
-          <font>
-            <Font size="30.0" />
-          </font>
-        </Text>
+        <Text fill="WHITE" font="$x1" layoutX="66.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asociación Guatemalteca de Hemofilia" />
       </children>
       <effect>
         <BoxBlur height="0.0" width="0.0">
           <input>
-            <ColorAdjust brightness="0.41269841269841256" contrast="1.0" hue="0.6507936507936507" saturation="0.23809523809523814" />
+            <ColorAdjust brightness="-0.3333333333333335" contrast="0.06349206349206349" saturation="-0.11111111111111116" />
           </input>
         </BoxBlur>
       </effect>
     </Pane>
-    <Pane focusTraversable="false" layoutX="390.0" layoutY="429.0" prefHeight="157.0" prefWidth="169.0" style="-fx-background-color: ORANGE;&#10;">
+    <Pane focusTraversable="false" layoutX="387.0" layoutY="198.0" prefHeight="761.0" prefWidth="17.0" rotate="90.0" style="-fx-background-color: RED;&#10;">
       <effect>
-        <BoxBlur height="0.0" width="0.0">
-          <input>
-            <ColorAdjust brightness="0.41269841269841256" contrast="1.0" hue="-0.2222222222222222" saturation="0.23809523809523814">
-              <input>
-                <Bloom />
-              </input>
-            </ColorAdjust>
-          </input>
-        </BoxBlur>
-      </effect>
-    </Pane>
-    <Pane focusTraversable="false" layoutX="40.0" layoutY="423.0" prefHeight="169.0" prefWidth="157.0" rotate="90.0" style="-fx-background-color: BLUE SKY;&#10;">
-      <effect>
-        <ColorAdjust brightness="0.41269841269841256" contrast="1.0" hue="-0.2222222222222222" saturation="0.23809523809523814">
+        <ColorAdjust brightness="-0.8888888888888891" contrast="1.0" hue="-0.6984126984126984">
           <input>
             <Bloom />
           </input>
         </ColorAdjust>
       </effect>
     </Pane>
-    <Pane focusTraversable="false" layoutX="568.0" layoutY="429.0" prefHeight="157.0" prefWidth="169.0" style="-fx-background-color: YELLOW;&#10;">
-      <effect>
-        <BoxBlur height="2.0" width="2.0">
-          <input>
-            <ColorAdjust brightness="0.41269841269841256" contrast="1.0" hue="0.20634920634920628" saturation="0.23809523809523814">
-              <input>
-                <Bloom />
-              </input>
-            </ColorAdjust>
-          </input>
-        </BoxBlur>
-      </effect>
-    </Pane>
+    <ImageView fitHeight="278.0129464135792" fitWidth="162.00001525878906" layoutX="624.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../assets/logos/logoAgh.jpg" />
+      </image>
+    </ImageView>
+    <Hyperlink layoutX="33.0" layoutY="150.0" rotate="351.0" text="Pacien-&#10;tes" textFill="WHITE">
+      <font>
+        <Font size="35.0" />
+      </font>
+    </Hyperlink>
   </children>
+  <effect>
+    <Bloom threshold="0.99999555" />
+  </effect>
 </AnchorPane>
