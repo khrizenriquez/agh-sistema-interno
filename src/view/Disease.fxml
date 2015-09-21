@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color:BLUE;&#10;&#10;&#10;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.DiseaseController">
+  <children>
+    <Pane focusTraversable="false" layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color:BLUE;&#10;&#10;">
+      <children>
+        <AnchorPane id="AnchorPane" layoutX="88.0" layoutY="133.0" />
+        <Text fontSmoothingType="LCD" layoutX="430.0" layoutY="82.0" scaleX="8.1325525324953" scaleY="7.938564601104593" strokeType="OUTSIDE" strokeWidth="0.0" text="Enfermedades">
+          <font>
+            <Font size="10.0" />
+          </font>
+        </Text>
+        <Hyperlink layoutX="14.0" layoutY="490.0" onAction="#back" prefHeight="96.1015625" prefWidth="254.0" text="Regresar" textFill="WHITE">
+          <font>
+            <Font size="50.0" />
+          </font>
+        </Hyperlink>
+      </children>
+      <effect>
+        <BoxBlur height="0.0" width="0.0">
+          <input>
+            <ColorAdjust brightness="0.2857142857142856" contrast="1.0" hue="0.11111111111111094" saturation="0.047619047619047894" />
+          </input>
+        </BoxBlur>
+      </effect>
+    </Pane>
+  </children>
+  <effect>
+    <ColorAdjust hue="-0.38095238095238093" />
+  </effect>
+</AnchorPane>

@@ -21,7 +21,7 @@ public class User extends Conexion {
     private int userTypeId = 0, userStatus = 0;
     private ResultSet rs = null;
     
-    public User() throws ClassNotFoundException {}
+   public User() throws ClassNotFoundException {}
 
     public User setUser (String userName, String password, String createdAt, 
             String updatedAt, int userTypeId, int userStatus) {

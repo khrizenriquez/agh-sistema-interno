@@ -34,7 +34,7 @@
     </Pane>
     <Pane focusTraversable="false" layoutX="54.0" layoutY="259.0" prefHeight="145.02627563476562" prefWidth="157.0" rotate="5.0" style="-fx-background-color:BLUE SKY;&#10;">
       <children>
-        <Hyperlink layoutX="2.0" layoutY="27.0" prefHeight="86.62365531921387" prefWidth="155.046875" text="Enferme-&#10; dades" textAlignment="LEFT" textFill="WHITE">
+        <Hyperlink layoutX="2.0" layoutY="27.0" onAction="#windowDisease" prefHeight="86.62365531921387" prefWidth="155.046875" text="Enferme-&#10; dades" textAlignment="LEFT" textFill="WHITE">
           <font>
             <Font size="30.0" fx:id="x1" />
           </font>
@@ -94,7 +94,7 @@
         <Image url="@../assets/logos/logoAgh.jpg" />
       </image>
     </ImageView>
-    <Hyperlink layoutX="33.0" layoutY="150.0" rotate="351.0" text="Pacien-&#10;tes" textFill="WHITE">
+    <Hyperlink layoutX="33.0" layoutY="150.0" onAction="#windowPatient" rotate="351.0" text="Pacien-&#10;tes" textFill="WHITE">
       <font>
         <Font size="35.0" />
       </font>
